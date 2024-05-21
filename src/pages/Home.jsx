@@ -1,19 +1,15 @@
-import React, { useContext } from "react";
-import { CounterContext } from "../hook/CounterContext";
+import React from "react";
 import Form from "../components/Form";
+import Counter from "../components/Counter";
 
 const Home = () => {
-  const { counter, setCounter } = useContext(CounterContext);
-
   return (
-    <div>
+    <div className="container">
       <h2>Counter Section</h2>
-      <button onClick={() => setCounter(counter + 1)}>+</button>
-      {counter}
-      <button onClick={() => setCounter(counter - 1)}>-</button>
+      <Counter />
       <hr />
-      <h2>Form Section</h2>
-      <Form />
+      {/* <h2>Form Section</h2>
+      <Form /> */}
     </div>
   );
 };
